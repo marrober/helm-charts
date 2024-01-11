@@ -8,7 +8,7 @@ This repository contains helm charts to deploy Red Hat samples.
     "mr-charts" has been added to your repositories
 
     $ helm repo list 
-    NAME           	URL                               
+    NAME         URL                               
     mr-charts    https://marrober.github.io/helm-charts
 
 
