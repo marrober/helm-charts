@@ -3,12 +3,12 @@ entries:
   pacman:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-11T14:25:28.079396107Z"
+    created: "2024-01-11T14:36:51.407718523Z"
     description: A Helm chart for Kubernetes
     digest: e94ee2a50e2c09709deea44ead6dc07ce4641e401963e01037901ca28da50e72
     name: pacman
     type: application
     urls:
-    - https://marrober.github.io/helm-charts/pacman-0.1.0.tgz
+    - https://marrober.github.io/helm-charts/charts/pacman-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-11T14:25:28.078461048Z"
+generated: "2024-01-11T14:36:51.407260605Z"
