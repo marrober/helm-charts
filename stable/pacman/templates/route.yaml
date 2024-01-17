@@ -6,7 +6,7 @@ metadata:
   labels:
     {{- include "pacman.labels" . | nindent 4 }}
 spec:
-  host: {{ .Values.deploymentName }}-{{ .Release.Namespace}}.apps.conroe.demolab.local
+  host: {{ .Values.deploymentName }}-{{ .Release.Namespace}}.{{ .Values.clusterAPI }}
   to:
     kind: Service
     name: {{ .Values.service.name }}
