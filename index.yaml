@@ -3,32 +3,42 @@ entries:
   pacman:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-17T11:17:59.100998336Z"
+    created: "2025-04-29T16:22:57.000628+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 5cbe69380471b781e5fdcda2052e89743250771e3d428e84025b58cf6986ddd2
+    name: pacman
+    type: application
+    urls:
+    - https://marrober.github.io/helm-charts/charts/charts/pacman-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-04-29T16:22:57.00048+01:00"
     description: A Helm chart for Kubernetes
     digest: 9da08b14c5b4eb7cbdce981ff260a829ad4eea5ee193cdf38ba7cf26011e35b6
     name: pacman
     type: application
     urls:
-    - https://marrober.github.io/helm-charts/charts/pacman-0.1.2.tgz
+    - https://marrober.github.io/helm-charts/charts/charts/pacman-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-17T11:17:59.100791503Z"
+    created: "2025-04-29T16:22:57.000338+01:00"
     description: A Helm chart for Kubernetes
     digest: 40bb6481fb90d3dde8aff3e2b194c19fda0111458606544f4e9cc3bfd836188a
     name: pacman
     type: application
     urls:
-    - https://marrober.github.io/helm-charts/charts/pacman-0.1.1.tgz
+    - https://marrober.github.io/helm-charts/charts/charts/pacman-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-17T11:17:59.100561579Z"
+    created: "2025-04-29T16:22:57.000181+01:00"
     description: A Helm chart for Kubernetes
     digest: e94ee2a50e2c09709deea44ead6dc07ce4641e401963e01037901ca28da50e72
     name: pacman
     type: application
     urls:
-    - https://marrober.github.io/helm-charts/charts/pacman-0.1.0.tgz
+    - https://marrober.github.io/helm-charts/charts/charts/pacman-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-17T11:17:59.100221479Z"
+generated: "2025-04-29T16:22:56.999798+01:00"
