@@ -35,45 +35,8 @@ spec:
     repoURL: https://marrober.github.io/helm-charts/
     helm:
       releaseName: pacman-dev
-      parameters:
-        - name: deploymentName
-          value: pacman
-        - name: namespace
-          value: pacman-helm-development
-        - name: image.repository
-          value: quay.io/marrober/pacman
-        - name: image.tag
-          value: 6mkcj
-        - name: applicationFramework
-          value: nodejs
-        - name: applicationFrameworkVersion
-          value: 16-ubi8
-        - name: service.name
-          value: pacman
-        - name: service.type
-          value: ClusterIP
-        - name: service.port
-          value: "8080"
-        - name: service.portName
-          value: 8080-tcp
-        - name: service.targetPort
-          value: "8080"
-        - name: service.weight
-          value: "100"
-        - name: route.termination
-          value: edge
-        - name: clusterAPI
-          value: apps.conroe.demolab.local
-        - name: autoscaling.enabled
-          value: "false"
-        - name: autoscaling.minReplicas
-          value: "1"
-        - name: autoscaling.maxReplicas
-          value: "100"
-        - name: autoscaling.targetCPUUtilizationPercentage
-          value: "80"
-        - name: replicaCount
-          value: "4"
+      valuesFiles:
+      - 01-values-dev.yaml
   syncPolicy:
     automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
       prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
