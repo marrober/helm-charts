@@ -3,10 +3,12 @@
 # Declare variables to be passed into your templates.
 
 deploymentName: pacman
-namespace: pacman-dev
+namespace: pacman-helm-development
 
 applicationFramework: nodejs
 applicationFrameworkVersion: 16-ubi8
+
+clusterAPI: apps.cluster-jdnfw.jdnfw.sandbox1112.opentlc.com
 
 replicaCount: 10
 
