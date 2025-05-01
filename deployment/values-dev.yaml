@@ -36,12 +36,13 @@ pacman:
     # runAsNonRoot: true
     # runAsUser: 1000
 
+  serviceName: pacman
   service:
     type: ClusterIP
     port: 8080
     portName: 8080-tcp
     targetPort: 8080
-    name: pacman
+#    name: pacman
     weight: 100
   route:
     termination: edge
