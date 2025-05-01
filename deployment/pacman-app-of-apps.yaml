@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pacman-app-of-apps
+spec:
+  destination:
+    name: pacman-app-of-apps
+    namespace: openshift-gitops
+  source:
+    path: deployment/apps
+    repoURL: https://github.com/marrober/helm-charts.git
+    targetRevision: HEAD
+    directory: {}
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
