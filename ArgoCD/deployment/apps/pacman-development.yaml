@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/marrober/helm-charts.git
-    path: deployment
+    path: ArgoCD/deployment
     helm:
       releaseName: pacman-helm-dev
       valuesFiles:
