@@ -10,10 +10,10 @@ spec:
   path: /
   to:
     kind: Service
-    name: {{ .Values.service.name }}
-    weight: {{ .Values.service.weight }}
+    name: {{ .Values.serviceName }}
+    weight: {{ .Values.serviceWeight }}
   port:
-    targetPort: {{ .Values.service.portName }}
+    targetPort: {{ .Values.servicePortName }}
   tls:
-    termination: edge
+    termination:  {{ .Values.routeTermination }}
   wildcardPolicy: None

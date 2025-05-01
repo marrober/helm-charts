@@ -6,7 +6,7 @@ metadata:
   labels:
     {{- include "pacman.labels" . | nindent 4 }}
 spec:
-  {{- if not .Values.autoscaling.enabled }}
+  {{- if not .Values.autoscalingEnabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
@@ -27,8 +27,8 @@ spec:
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.imageRepositoryName }}:{{ .Values.imageRepositoryTag }}"
+          imagePullPolicy: {{ .Values.imageRepositoryPullPolicy }}
           ports:
-            - containerPort: {{ .Values.service.port }}
+            - containerPort: {{ .Values.servicePort }}
               protocol: TCP

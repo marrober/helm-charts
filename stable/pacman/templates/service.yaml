@@ -6,10 +6,10 @@ metadata:
   labels: 
     {{- include "pacman.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
+  type: {{ .Values.serviceType }}
   ports:
-    - name: {{ .Values.service.portName }}
-      port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.targetPort }}
+    - name: {{ .Values.servicePortName }}
+      port: {{ .Values.servicePort }}
+      targetPort: {{ .Values.serviceTargetPort }}
       protocol: TCP
   selector: {{- include "pacman.selectorLabels" . | nindent 4 }}
