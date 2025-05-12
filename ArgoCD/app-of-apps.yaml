@@ -8,7 +8,8 @@ spec:
     namespace: pacman-helm-dev
     server: https://kubernetes.default.svc
   source:
-    path: ArgoCD/deployment/apps
+    path: ArgoCD/app-definitions
+    
     repoURL: https://github.com/marrober/helm-charts.git
     targetRevision: HEAD
     directory: {}
