@@ -12,10 +12,10 @@ spec:
     repoURL: https://github.com/marrober/helm-charts.git
     path: ArgoCD/deployment
     targetRevision: test-branch
-    helm:
-      releaseName: pacman-helm-dev
-      valuesFiles:
-        - values-dev.yaml
+#    helm:
+#      releaseName: pacman-helm-dev
+#      valuesFiles:
+#        - values-dev.yaml
   syncPolicy:
     automated: 
       prune: true 
