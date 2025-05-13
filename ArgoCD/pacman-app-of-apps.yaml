@@ -12,7 +12,7 @@ spec:
     repoURL: https://github.com/marrober/helm-charts.git
     targetRevision: test-branch
     directory: {}
-  project: default
+  project: helm-argo-1
   syncPolicy:
     automated:
       prune: true

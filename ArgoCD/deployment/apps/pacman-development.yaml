@@ -4,7 +4,7 @@ metadata:
   name: pacman-helm-development
   namespace: openshift-gitops
 spec:
-  project: default
+  project: helm-argo-1
   destination:
     namespace: pacman-helm-development
     server: https://kubernetes.default.svc
