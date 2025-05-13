@@ -9,8 +9,8 @@ spec:
     namespace: pacman-helm-development-3
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/marrober/helm-charts.git
-    chart: https://marrober.github.io/helm-charts/
+    repoURL: https://marrober.github.io/helm-charts/
+    chart: pacman
     targetRevision: 0.1.7
     helm:
       releaseName: pacman-helm-dev
