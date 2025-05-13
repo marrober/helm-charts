@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: pacman-app-of-apps
+  name: pacman-app-of-apps-2
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: pacman-helm-development
+    namespace: pacman-helm-development-2
     server: https://kubernetes.default.svc
   source:
-    path: ArgoCD/deployment/apps
+    path: ArgoCD-2/deployment/apps
     repoURL: https://github.com/marrober/helm-charts.git
     targetRevision: test-branch
     directory: {}
