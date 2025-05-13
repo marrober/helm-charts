@@ -13,7 +13,7 @@ pacman:
 
   replicaCount: 3
 
-  imageRepositoryName: image-registry.openshift-image-registry.svc:5000/pacman/pacman
+  imageRepositoryName: image-registry.openshift-image-registry.svc:5000/pacman-ci/pacman
   imageRepositoryTag: 7j7nw
   imageRepositoryPullPolicy: IfNotPresent
   
