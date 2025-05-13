@@ -10,7 +10,7 @@ spec:
   source:
     path: ArgoCD-2/deployment/apps
     repoURL: https://github.com/marrober/helm-charts.git
-    targetRevision: test-branch
+    targetRevision: main
     directory: {}
   project: helm-argo-2
   syncPolicy:

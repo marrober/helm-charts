@@ -17,7 +17,7 @@ spec:
         valueFiles:
           - $values/ArgoCD-3/deployment/apps/values.yaml
     - repoURL: https://github.com/marrober/helm-charts.git
-      targetRevision: test-branch
+      targetRevision: main
       ref: values
   syncPolicy:
     automated: 
