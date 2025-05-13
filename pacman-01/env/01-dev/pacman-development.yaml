@@ -6,11 +6,11 @@ metadata:
 spec:
   project: helm-argo-1
   destination:
-    namespace: pacman-helm-development
+    namespace: pacman-helm-development-01
     server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/marrober/helm-charts.git
-    path: ArgoCD/deployment
+    path: pacman-01/deployment/01-dev
     targetRevision: main
   syncPolicy:
     automated: 
