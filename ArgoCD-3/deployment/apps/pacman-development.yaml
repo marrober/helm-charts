@@ -9,16 +9,16 @@ spec:
     namespace: pacman-helm-development-3
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://marrober.github.io/helm-charts/
-    chart: pacman
-    targetRevision: 0.1.7
-    helm:
-      releaseName: pacman-helm-dev
-      valueFiles:
-        - $values/ArgoCD-3/deployment/apps/values.yaml
-  - repoURL: https://github.com/marrober/helm-charts.git
-    targetRevision: test-branch
-    ref: values
+    - repoURL: https://marrober.github.io/helm-charts/
+      chart: pacman
+      targetRevision: 0.1.7
+      helm:
+        releaseName: pacman-helm-dev
+        valueFiles:
+          - $values/ArgoCD-3/deployment/apps/values.yaml
+    - repoURL: https://github.com/marrober/helm-charts.git
+      targetRevision: test-branch
+      ref: values
   syncPolicy:
     automated: 
       prune: true 
