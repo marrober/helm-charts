@@ -11,10 +11,10 @@ pacman:
 
   clusterAPI: apps.cluster-jdnfw.jdnfw.sandbox1112.opentlc.com
 
-  replicaCount: 7
+  replicaCount: 3
 
   imageRepositoryName: image-registry.openshift-image-registry.svc:5000/pacman/pacman
-  imageRepositoryTag: zjht7
+  imageRepositoryTag: 7j7nw
   imageRepositoryPullPolicy: IfNotPresent
   
 
