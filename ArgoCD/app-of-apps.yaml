@@ -9,7 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   source:
     path: ArgoCD/app-definitions
-    
     repoURL: https://github.com/marrober/helm-charts.git
     targetRevision: test-branch
     directory: {}
