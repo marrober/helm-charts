@@ -48,7 +48,7 @@ Selector labels
 {{- define "pacman.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "pacman.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
-app.openshift.io/runtime: {{ .Values.applicationFramework}}
-app.openshift.io/runtime-version: {{ .Values.applicationFrameworkVersion}}
+app.openshift.io/runtime: {{ .Values.pacman.applicationFramework}}
+app.openshift.io/runtime-version: {{ .Values.pacman.applicationFrameworkVersion}}
 {{- end }}
 
