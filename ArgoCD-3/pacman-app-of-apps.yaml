@@ -5,14 +5,14 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: pacman-helm-development-2
+    namespace: pacman-helm-development-3
     server: https://kubernetes.default.svc
   source:
     path: ArgoCD-2/deployment/apps
     repoURL: https://github.com/marrober/helm-charts.git
     targetRevision: test-branch
     directory: {}
-  project: helm-argo-2
+  project: helm-argo-3
   syncPolicy:
     automated:
       prune: true
