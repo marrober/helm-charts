@@ -16,7 +16,7 @@ spec:
         releaseName: pacman-helm-dev
         valueFiles:
           - $values/ArgoCD-3/deployment/apps/values.yaml
-          - $values/ArgoCD-3/deployment/apps/values-2.yaml
+#          - $values/ArgoCD-3/deployment/apps/values-2.yaml
     - repoURL: https://github.com/marrober/helm-charts.git
       targetRevision: main
       ref: values
