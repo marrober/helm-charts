@@ -2,33 +2,33 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.pacman.deploymentName }}
-  namespace: {{ .Values.namespace }}
+  namespace: {{ .Values.pacman.namespace }}
   labels:
     {{- include "pacman.labels" . | nindent 4 }}
 spec:
-  {{- if not .Values.autoscalingEnabled }}
-  replicas: {{ .Values.replicaCount }}
+  {{- if not .Values.pacman.autoscalingEnabled }}
+  replicas: {{ .Values.pacman.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
       {{- include "pacman.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
+      {{- with .Values.pacman.podAnnotations }}
       annotations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
         {{- include "pacman.selectorLabels" . | nindent 8 }}
     spec:
-      {{- with .Values.imagePullSecrets }}
+      {{- with .Values.pacman.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.imageRepositoryName }}:{{ .Values.imageRepositoryTag }}"
-          imagePullPolicy: {{ .Values.imageRepositoryPullPolicy }}
+          image: "{{ .Values.pacman.imageRepositoryName }}:{{ .Values.pacman.imageRepositoryTag }}"
+          imagePullPolicy: {{ .Values.pacman.imageRepositoryPullPolicy }}
           ports:
-            - containerPort: {{ .Values.servicePort }}
+            - containerPort: {{ .Values.pacman.servicePort }}
               protocol: TCP
