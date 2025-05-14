@@ -4,7 +4,7 @@ pacman:
   # Declare variables to be passed into your templates.
 
   deploymentName: pacman
-  namespace: default
+  namespace: pacman-helm-development
 
   applicationFramework: nodejs
   applicationFrameworkVersion: 16-ubi8
