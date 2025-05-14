@@ -5,6 +5,7 @@ metadata:
   namespace: {{ .Values.pacman.namespace }}
   labels:
     {{- include "pacman.labels" . | nindent 4 }}
+    novaluesfile: "true"
 spec:
   {{- if not .Values.pacman.autoscalingEnabled }}
   replicas: {{ .Values.pacman.replicaCount }}
