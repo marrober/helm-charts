@@ -5,6 +5,7 @@ metadata:
   namespace: {{ .Values.namespace }}
   labels:
     {{- include "pacman.labels" . | nindent 4 }}
+    chart-version: 0.2.4
 spec:
   {{- if not .Values.autoscalingEnabled }}
   replicas: {{ .Values.replicaCount }}
