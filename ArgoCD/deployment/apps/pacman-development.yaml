@@ -19,9 +19,7 @@ spec:
       allowEmpty: false 
     syncOptions: 
       - Validate=true 
-      - CreateNamespace=true 
       - PrunePropagationPolicy=foreground 
-      - PruneLast=true 
     retry:
       limit: 1 
       backoff:
