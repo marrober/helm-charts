@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/marrober/helm-charts.git
     path: ArgoCD/deployment
-    targetRevision: test-part-1
+    targetRevision: main
   syncPolicy:
     automated: 
       prune: true 

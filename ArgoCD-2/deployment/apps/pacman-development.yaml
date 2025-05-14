@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/marrober/helm-charts.git
     path: ArgoCD-2/deployment
-    targetRevision: test-branch
+    targetRevision: main
     helm:
       releaseName: pacman-helm-dev
       valueFiles:

@@ -11,13 +11,14 @@ spec:
   sources:
     - repoURL: https://marrober.github.io/helm-charts/
       chart: pacman
-      targetRevision: 0.1.7
+      targetRevision: 0.1.9
       helm:
         releaseName: pacman-helm-dev
         valueFiles:
           - $values/ArgoCD-3/deployment/apps/values.yaml
+#          - $values/ArgoCD-3/deployment/apps/values-2.yaml
     - repoURL: https://github.com/marrober/helm-charts.git
-      targetRevision: test-branch
+      targetRevision: main
       ref: values
   syncPolicy:
     automated: 
