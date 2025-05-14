@@ -1,19 +1,19 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: {{ .Values.pacman.deploymentName }}
-  namespace: {{ .Values.pacman.namespace }}
+  name: {{ .Values.deploymentName }}
+  namespace: {{ .Values.namespace }}
   labels:
     {{- include "pacman.labels" . | nindent 4 }}
 spec:
-  host: {{ .Values.pacman.deploymentName }}-{{ .Release.Namespace}}.{{ .Values.pacman.clusterAPI }}
+  host: {{ .Values.deploymentName }}-{{ .Release.Namespace}}.{{ .Values.clusterAPI }}
   path: /
   to:
     kind: Service
-    name: {{ .Values.pacman.serviceName }}
-    weight: {{ .Values.pacman.serviceWeight }}
+    name: {{ .Values.serviceName }}
+    weight: {{ .Values.serviceWeight }}
   port:
-    targetPort: {{ .Values.pacman.servicePortName }}
+    targetPort: {{ .Values.servicePortName }}
   tls:
-    termination:  {{ .Values.pacman.routeTermination }}
+    termination:  {{ .Values.routeTermination }}
   wildcardPolicy: None

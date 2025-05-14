@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.pacman.serviceName }}
-  namespace: {{ .Values.pacman.namespace }}
+  name: {{ .Values.serviceName }}
+  namespace: {{ .Values.namespace }}
   labels: 
     {{- include "pacman.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.pacman.serviceType }}
+  type: {{ .Values.serviceType }}
   ports:
-    - name: {{ .Values.pacman.servicePortName }}
-      port: {{ .Values.pacman.servicePort }}
-      targetPort: {{ .Values.pacman.serviceTargetPort }}
+    - name: {{ .Values.servicePortName }}
+      port: {{ .Values.servicePort }}
+      targetPort: {{ .Values.serviceTargetPort }}
       protocol: TCP
   selector: {{- include "pacman.selectorLabels" . | nindent 4 }}
