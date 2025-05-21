@@ -19,14 +19,13 @@ spec:
       labels:
         {{- include "simple-app.selectorLabels" . | nindent 8 }}
     spec:
-      {{- with .Values.imagePullSecrets }}
       containers:
-        - name: {{ .Chart.Name }}
-          image: "{{ .Values.imageRepositoryName }}:{{ .Values.imageRepositoryTag }}"
-          imagePullPolicy: {{ .Values.imageRepositoryPullPolicy }}
-          ports:
-            - containerPort: {{ .Values.servicePort }}
-              protocol: TCP
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.imageRepositoryName }}:{{ .Values.imageRepositoryTag }}"
+        imagePullPolicy: {{ .Values.imageRepositoryPullPolicy }}
+        ports:
+        - containerPort: {{ .Values.servicePort }}
+          protocol: TCP
 ---
 apiVersion: v1
 kind: Service
