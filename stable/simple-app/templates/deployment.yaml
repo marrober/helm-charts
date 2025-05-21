@@ -1,63 +1,65 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: app-3
+  name: {{ .Values.deploymentName }}
+  namespace: {{ .Values.namespace }}
   labels:
-    app: app-3
-    kustomizeIdentifer: app-to-update
+    {{- include "simple-app.labels" . | nindent 4 }}
 spec:
-  replicas: 4
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      deployment: app-3
-      app: app-3
+      {{- include "simple-app.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       labels:
-        deployment: app-3
-        app: app-3
+        {{- include "simple-app.selectorLabels" . | nindent 8 }}
     spec:
+      {{- with .Values.imagePullSecrets }}
       containers:
-        - name: app-3
-          image: quay.io/marrober/layers:latest
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.imageRepositoryName }}:{{ .Values.imageRepositoryTag }}"
+          imagePullPolicy: {{ .Values.imageRepositoryPullPolicy }}
           ports:
-            - containerPort: 8080
+            - containerPort: {{ .Values.servicePort }}
               protocol: TCP
-          imagePullPolicy: IfNotPresent
-          resources:
-            limits:
-              cpu: 1
-              memory: 500Mi
-            requests:
-              cpu: 50m
-              memory: 10Mi
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: app-3
+  name: {{ .Values.serviceName }}
+  namespace: {{ .Values.namespace }}
   labels:
-    app: app-3
-    kustomizeIdentifer: app-to-update
+    {{- include "simple-app.labels" . | nindent 4 }}
 spec:
+  type: {{ .Values.serviceType }}
   ports:
-  - name: http
-    port: 80
-    targetPort: 8080
-  selector:
-    app: app-3
+    - name: {{ .Values.servicePortName }}
+      port: {{ .Values.servicePort }}
+      targetPort: {{ .Values.serviceTargetPort }}
+      protocol: TCP
+  selector: {{- include "simple-app.selectorLabels" . | nindent 4 }}
 ---
-apiVersion: route.openshift.io/v1
 kind: Route
+apiVersion: route.openshift.io/v1
 metadata:
+  name: {{ .Values.deploymentName }}
+  namespace: {{ .Values.namespace }}
   labels:
-    app: app-3
-    kustomizeIdentifer: app-to-update
-  name: app-3
+    {{- include "simple-app.labels" . | nindent 4 }}
 spec:
-  port:
-    targetPort: http
+  host: {{ .Values.deploymentName }}-{{ .Release.Namespace}}.{{ .Values.clusterAPI }}
+  path: /
   to:
     kind: Service
-    name: app-3
-    weight: 100
+    name: {{ .Values.serviceName }}
+    weight: {{ .Values.serviceWeight }}
+  port:
+    targetPort: {{ .Values.servicePortName }}
+  tls:
+    termination:  {{ .Values.routeTermination }}
+  wildcardPolicy: None
