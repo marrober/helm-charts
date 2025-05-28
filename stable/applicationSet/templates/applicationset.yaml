@@ -1,35 +1,37 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: {{ .Values.name }}
+  name: {{ .Values.name }}-{{ .Values.environmentName }}
   namespace: openshift-gitops
-  labels:
-    kustomizeIdentifer: app-to-update
 spec:
   generators:
     - clusterDecisionResource:
         configMapRef: ocm-placement-generator
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: dev-clusters
+            cluster.open-cluster-management.io/placement: {{ .Values.name }}-{{ .Values.environmentName }}-placement
   template:
     metadata:
       annotations:
-        apps.open-cluster-management.io/ocm-managed-cluster: "{{ "{{" }} name {{ "}}" }}"
+        apps.open-cluster-management.io/ocm-managed-cluster: '{{ "{{" }} name {{ "}}" }}'
         apps.open-cluster-management.io/ocm-managed-cluster-app-namespace: openshift-gitops
         argocd.argoproj.io/skip-reconcile: "true" 
       labels:
         apps.open-cluster-management.io/pull-to-ocm-managed-cluster: "true" 
-      name: "{{ "{{" }} name {{ "}}" }}"
+      name: {{ .Values.name }}-{{ .Values.environmentName }}
     spec:
       destination:
-        namespace: argo-argo-app
-        server: "{{ "{{" }} server {{ "}}" }}"
-      project: to-replace
+        namespace: {{ .Values.name }}-{{ .Values.environmentName }}
+        server: '{{ "{{" }} server {{ "}}" }}'
+      project: {{ .Values.name }}
       source:
-        path: Argo-Apps/argo-app/app-deployment
-        repoURL: https://github.com/marrober/simple-apps.git
-        targetRevision: main
+        repoURL: {{ .Values.configRepositoryURL }}
+        path: {{ .Values.configRepositoryPath }}
+        targetRevision: {{ .Values.configRepositoryRevision }}
+        helm:
+          releaseName: {{ .Values.helmReleaseName }}
+          valueFiles:
+          - {{ .Values.valuesFileName }}
       syncPolicy:
         automated: {}
         syncOptions:
