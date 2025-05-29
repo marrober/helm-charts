@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: {{ .values.NameAndEnv }}
+  name: {{ .Values.NameAndEnv }}
   namespace: openshift-gitops
 spec:
   generators:
@@ -9,7 +9,7 @@ spec:
         configMapRef: ocm-placement-generator
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: {{ .values.NameAndEnv }}-placement
+            cluster.open-cluster-management.io/placement: {{ .Values.NameAndEnv }}-placement
   template:
     metadata:
       annotations:
@@ -18,10 +18,10 @@ spec:
         argocd.argoproj.io/skip-reconcile: "true" 
       labels:
         apps.open-cluster-management.io/pull-to-ocm-managed-cluster: "true" 
-      name: {{ .values.NameAndEnv }}
+      name: {{ .Values.NameAndEnv }}
     spec:
       destination:
-        namespace: {{ .values.NameAndEnv }}
+        namespace: {{ .Values.NameAndEnv }}
         server: '{{ "{{" }} server {{ "}}" }}'
       project: {{ .Values.name }}
       source:
