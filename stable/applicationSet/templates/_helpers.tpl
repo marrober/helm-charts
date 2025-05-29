@@ -1,3 +1,7 @@
+{{ define "fullName" -}}
+{{- printf "%s-%s" .Values.name .Values.environmentName -}}
+{{- end -}}
+
 {{/*
 Expand the name of the chart.
 */}}
