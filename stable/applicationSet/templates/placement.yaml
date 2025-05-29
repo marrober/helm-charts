@@ -1,7 +1,7 @@
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
-  name: {{ .Values.name }}-{{ .Values.environmentName }}-placement
+  name: {{ .Values.NameAndEnv }}-placement
   namespace: openshift-gitops
 spec:
   clusterSets:
