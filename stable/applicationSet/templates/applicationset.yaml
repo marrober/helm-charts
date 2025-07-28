@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: {{ .Values.NameAndEnv }}
+  name: {{ .Values.Name }}-{{ .Values.Environment }}
   namespace: openshift-gitops
 spec:
   generators:
@@ -9,21 +9,21 @@ spec:
         configMapRef: ocm-placement-generator
         labelSelector:
           matchLabels:
-            cluster.open-cluster-management.io/placement: {{ .Values.NameAndEnv }}-placement
+            cluster.open-cluster-management.io/placement: {{ .Values.TargetClusterSet }}
   template:
     metadata:
       annotations:
-        apps.open-cluster-management.io/ocm-managed-cluster: '{{ "{{" }} name {{ "}}" }}'
+        apps.open-cluster-management.io/ocm-managed-cluster: '{{ "{{" }}name{{ "}}" }}'
         apps.open-cluster-management.io/ocm-managed-cluster-app-namespace: openshift-gitops
         argocd.argoproj.io/skip-reconcile: "true" 
       labels:
         apps.open-cluster-management.io/pull-to-ocm-managed-cluster: "true" 
-      name: {{ .Values.NameAndEnv }}
+      name: '{{ "{{" }}name{{ "}}" }}-{{ .Values.Name }}-{{ .Values.Environment }}'
     spec:
       destination:
-        namespace: {{ .Values.NameAndEnv }}
-        server: '{{ "{{" }} server {{ "}}" }}'
-      project: {{ .Values.name }}
+        namespace: {{ .Values.Name }}-{{ .Values.Environment }}
+        server: '{{ "{{" }}server{{ "}}" }}'
+      project: {{ .Values.Name }}
       source:
         repoURL: {{ .Values.configRepositoryURL }}
         path: {{ .Values.configRepositoryPath }}

@@ -1,6 +1,10 @@
 apiVersion: v1
 kind: Namespace
 metadata:
+  labels: 
+    applicationSetHubNamespace: "true"
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-  name: {{ .Values.NameAndEnv }}
+    targetClusterSet: "{{ .Values.TargetClusterSet }}"
+    projectName: {{ .Values.Name }}
+  name: {{ .Values.Name }}-{{ .Values.Environment }}

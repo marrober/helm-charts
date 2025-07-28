@@ -3,7 +3,17 @@ entries:
   applicationSet:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.495499025+01:00"
+    created: "2025-07-28T15:31:39.541611+01:00"
+    description: A Helm chart for Kubernetes
+    digest: c0691236ec69fd9c46190a5dfa828d959c536baa2792ab574e4864c223b52800
+    name: applicationSet
+    type: application
+    urls:
+    - https://marrober.github.io/helm-charts/charts/applicationSet-0.6.tgz
+    version: "0.6"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-07-28T15:31:39.541513+01:00"
     description: A Helm chart for Kubernetes
     digest: c9a5435bd2312da3526e1ec1bc955aecd0b9c3a623943fd84a5612f016887338
     name: applicationSet
@@ -13,7 +23,7 @@ entries:
     version: "0.5"
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.495385752+01:00"
+    created: "2025-07-28T15:31:39.541354+01:00"
     description: A Helm chart for Kubernetes
     digest: 815ee3c47bd115874cf287109be7627e92f9ead09274839e01c0c512ad798597
     name: applicationSet
@@ -23,7 +33,7 @@ entries:
     version: "0.4"
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.495249081+01:00"
+    created: "2025-07-28T15:31:39.540701+01:00"
     description: A Helm chart for Kubernetes
     digest: 17e5c37873a219bf02449230b1fdf275a3ab882e5848634d7da1f84faabd52bd
     name: applicationSet
@@ -33,7 +43,7 @@ entries:
     version: "0.3"
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.49511252+01:00"
+    created: "2025-07-28T15:31:39.540398+01:00"
     description: A Helm chart for Kubernetes
     digest: d4d3a93f9d950f899365c6bfaba197a846076d79b31140692719ac93949de6c8
     name: applicationSet
@@ -43,7 +53,7 @@ entries:
     version: "0.2"
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.494764667+01:00"
+    created: "2025-07-28T15:31:39.540132+01:00"
     description: A Helm chart for Kubernetes
     digest: ea4e25852b7b7fc0d963431e497ec0bbe90ae62d1a78be3a3927bc3ca9943e04
     name: applicationSet
@@ -54,7 +64,7 @@ entries:
   pacman:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.509799226+01:00"
+    created: "2025-07-28T15:31:39.552565+01:00"
     description: A Helm chart for Kubernetes
     digest: f877134bcd56e2ddf229183f783436676dfa3d6c10beba83a0b9f3a0d30cc8ea
     name: pacman
@@ -64,7 +74,7 @@ entries:
     version: 0.2.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.509560471+01:00"
+    created: "2025-07-28T15:31:39.552336+01:00"
     description: A Helm chart for Kubernetes
     digest: 3164865ac34f026c52547cca1524b653627d2b8f3d712873c5e3b3372d90b03e
     name: pacman
@@ -74,7 +84,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.509361398+01:00"
+    created: "2025-07-28T15:31:39.552214+01:00"
     description: A Helm chart for Kubernetes
     digest: c4e3383e238ce49f723f96a0be70bf05b8a11bc6d9c65b9b6f0b9ac71349c32d
     name: pacman
@@ -84,7 +94,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.509126402+01:00"
+    created: "2025-07-28T15:31:39.551944+01:00"
     description: A Helm chart for Kubernetes
     digest: 385bbd841781158f16d1777d61fc79dcc8640e5b338202c1e3200f480d5c8bdf
     name: pacman
@@ -94,7 +104,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.508911848+01:00"
+    created: "2025-07-28T15:31:39.551676+01:00"
     description: A Helm chart for Kubernetes
     digest: a9adf24ad41ad3ccfd45129b0324aecf218245242bbce21b2728bac941043203
     name: pacman
@@ -104,7 +114,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.50869376+01:00"
+    created: "2025-07-28T15:31:39.551447+01:00"
     description: A Helm chart for Kubernetes
     digest: 0add199d419e90b33d00e57f3783fa610b572ddf806a62df7b3666099855a272
     name: pacman
@@ -114,7 +124,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.508241424+01:00"
+    created: "2025-07-28T15:31:39.551157+01:00"
     description: A Helm chart for Kubernetes
     digest: 884eae9be7c73541d1443de7d610fd44eb82aa05dbcaf9011f4a28ef383d1b4a
     name: pacman
@@ -124,7 +134,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.507738365+01:00"
+    created: "2025-07-28T15:31:39.550882+01:00"
     description: A Helm chart for Kubernetes
     digest: f57c0f28ef8c95bdb411497e7a99704352a798992a9566ef4305b71b794629ff
     name: pacman
@@ -134,7 +144,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.507206382+01:00"
+    created: "2025-07-28T15:31:39.550418+01:00"
     description: A Helm chart for Kubernetes
     digest: 49285ee6019bb9b25e6be38891d6f4bdcd6f304a5e947d4f89660df8ef041de4
     name: pacman
@@ -144,7 +154,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.506945765+01:00"
+    created: "2025-07-28T15:31:39.55017+01:00"
     description: A Helm chart for Kubernetes
     digest: 5317e649d82a8c3b8489123bb2677ec099776a455d68a935b5508a60c267d360
     name: pacman
@@ -154,7 +164,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.506587592+01:00"
+    created: "2025-07-28T15:31:39.549901+01:00"
     description: A Helm chart for Kubernetes
     digest: 80fd1ed0c2527723b80c6ae93177a80d7cc07b7f5fac8b73373cf85091512b4d
     name: pacman
@@ -164,7 +174,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.50613818+01:00"
+    created: "2025-07-28T15:31:39.549734+01:00"
     description: A Helm chart for Kubernetes
     digest: cb40fb85ba9a4dcc27dcff2435179d4c0fb9788978841306345df24a7f3cc763
     name: pacman
@@ -174,7 +184,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.505593145+01:00"
+    created: "2025-07-28T15:31:39.549566+01:00"
     description: A Helm chart for Kubernetes
     digest: 5cbe69380471b781e5fdcda2052e89743250771e3d428e84025b58cf6986ddd2
     name: pacman
@@ -184,7 +194,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.505055414+01:00"
+    created: "2025-07-28T15:31:39.549405+01:00"
     description: A Helm chart for Kubernetes
     digest: 9da08b14c5b4eb7cbdce981ff260a829ad4eea5ee193cdf38ba7cf26011e35b6
     name: pacman
@@ -194,7 +204,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.504490733+01:00"
+    created: "2025-07-28T15:31:39.549248+01:00"
     description: A Helm chart for Kubernetes
     digest: 40bb6481fb90d3dde8aff3e2b194c19fda0111458606544f4e9cc3bfd836188a
     name: pacman
@@ -204,7 +214,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-12T17:26:06.503970464+01:00"
+    created: "2025-07-28T15:31:39.548505+01:00"
     description: A Helm chart for Kubernetes
     digest: e94ee2a50e2c09709deea44ead6dc07ce4641e401963e01037901ca28da50e72
     name: pacman
@@ -212,4 +222,4 @@ entries:
     urls:
     - https://marrober.github.io/helm-charts/charts/pacman-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-12T17:26:06.493951119+01:00"
+generated: "2025-07-28T15:31:39.538715+01:00"
